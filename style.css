@@ -1,0 +1,1223 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Centre all images across the entire website */
+img {
+  display: block;
+  margin: 1.2rem auto;    /* centres the image horizontally */
+  max-width: 100%;        /* ensures images never overflow the container */
+  height: auto;
+}
+
+
+/* HEADER */
+
+.site-header {
+  background: #0f172a; /* dark navy */
+  color: #f9fafb;
+  padding: 1.5rem 1rem;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f9fafb;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #f9fafb;
+  color: #0f172a;
+  background: #f9fafb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cv-button:hover {
+  background: #e5e7eb;
+}
+
+/* MAIN */
+
+.main-wrapper {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+
+/* TABS */
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0rem;
+}
+
+
+
+.tab {
+  border: 1px solid #d1d5db;
+  border-bottom: none; /* no line under any tab */
+  padding: 0.6rem 1.1rem;
+  background: #e5e7eb;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+.tab.active {
+  border-bottom: none;     /* remove the line under the active tab */
+}
+
+.tab:focus-visible {
+  outline: 2px solid #0f172a;
+}
+
+/* TAB COLOURS */
+.tab-home {
+  background: #e0f2fe;
+}
+
+.tab-education {
+  background: #fef3c7;
+}
+
+.tab-experience {
+  background: #dcfce7;
+}
+
+.tab-projects {
+  background: #fae8ff;
+}
+
+.tab-skills {
+  background: #fee2e2;
+}
+
+.tab-software {
+  background: #e6e9ef;
+}
+
+
+/* FOLDER BODY */
+
+.folder-body {
+  border: 1px solid #d1d5db;
+  border-top: none;              /* no line along the top edge */
+  border-radius: 0 10px 10px 10px;
+  padding: 1.5rem;
+  background: #e0f2fe;           /* default folder colour (Home) */
+  min-height: 260px;
+}
+
+
+/* PANELS */
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+h2 {
+  margin-top: 0;
+}
+/* HOME LAYOUT */
+
+.home-top {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.home-left {
+  flex: 0 0 auto;
+}
+
+.home-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0f172a;
+}
+
+.home-contact {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.home-contact a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.home-contact a:hover {
+  text-decoration: underline;
+}
+
+.home-body p {
+  margin-bottom: 0.9rem;
+}
+
+.home-highlights {
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+}
+
+.home-highlights ul {
+  padding-left: 1.2rem;
+  margin: 0.3rem 0 0;
+}
+
+.home-highlights li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.home-interests {
+  margin-top: 2rem; /* adds clean spacing above the section */
+}
+
+.home-interests ul {
+  padding-left: 1.2rem;
+  margin: 0.3rem 0 0;
+}
+
+.home-interests li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.wavy-divider {
+  width: 100%;
+  height: 25px;
+  margin: 2rem 0 1.5rem 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5 Q 25 0, 50 12.5 T 100 12.5 T 150 12.5 T 200 12.5' stroke='%230f172a' stroke-width='2.5' fill='transparent' /%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 100px 25px; /* makes the waves smooth and even */
+}
+
+/* EDUCATION TAB */
+#education h2 {
+  text-decoration: underline;
+}
+
+.education-entry {
+  margin-bottom: 2.5rem;
+}
+
+.education-entry h3 {
+  margin-bottom: 0.2rem;
+}
+
+.education-meta {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #4b5563;
+}
+
+.education-entry ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.education-main h3 {
+  margin-bottom: 0.1rem;
+}
+
+.education-degree {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.education-details {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.education-grade,
+.education-dates {
+  margin: 0;
+}
+
+
+.education-section {
+  margin-top: 1.8rem;
+}
+
+.module-list,
+.achievements-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0.4rem 0 0;
+}
+
+.module-list li,
+.achievements-list li {
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+.module-title {
+  display: block;              /* puts title on its own line */
+  font-weight: 600;
+  margin-bottom: 0.25rem;      /* gap between title and description */
+}
+
+.module-desc {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #374151;              /* subtle dark grey */
+}
+
+.achievements-list li {
+  margin-bottom: 1.2rem;            /* space between achievements */
+}
+
+.achievement-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;           /* small gap to description */
+}
+
+.achievement-desc {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #374151;                   /* subtle dark-grey text */
+}
+
+/* Optional: space between the description and PDF link */
+.achievements-list .pdf-link {
+  margin-top: 0.4rem;
+  display: inline-block;
+}
+
+
+/* PDF link styling in achievements */
+
+.pdf-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #0f172a;
+  color: #0f172a;
+  background: #f9fafb;
+}
+
+.pdf-link:hover {
+  background: #e5e7eb;
+}
+/* MPhys achievement layout */
+
+.achievement-mphys {
+  padding: 0.75rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.achievement-mphys:last-child {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.achievement-subtitle {
+  display: block;
+  font-size: 0.95rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+.achievement-body p,
+.achievement-finance p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-subheading {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.achievement-buttons {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* make the left button feel slightly more primary (optional) */
+.pdf-link-primary {
+  background: #0f172a;
+  color: #f9fafb;
+  border-color: #0f172a;
+}
+
+.pdf-link-primary:hover {
+  background: #111827;
+}
+
+.latex-note {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  color: #475569;
+}
+
+/* LaTeX logo mimic */
+.latex-logo {
+  font-family: "Times New Roman", "Nimbus Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.latex-a,
+.latex-e {
+  font-size: 0.9em;
+  position: relative;
+}
+
+.latex-a {
+  top: -0.25em;    /* raise the 'a' */
+}
+
+.latex-e {
+  bottom: -0.22em; /* lower the 'e' */
+}
+
+
+/* ============================
+   EXPERIENCE TIMELINE
+   ============================ */
+
+.timeline {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.timeline h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Main bar */
+.timeline-bar {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding: 1.8rem 1.5rem 3.5rem; /* top = room for years, bottom = room for dots */
+  border-radius: 18px;
+  background: #f4f4f4;
+}
+
+/* Years row (inside the bar) */
+.timeline-years {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Horizontal axis line through the bar */
+.timeline-bar::before {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 50%;
+  height: 2px;
+  background: #ddd;
+  transform: translateY(-50%);
+}
+
+/* Track spanning from 2017 to 2026 */
+.timeline-track {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 90px; /* room for above & below spans */
+  pointer-events: none;
+}
+
+/* ========== SPANS (ERROR-BAR STYLE) ========== */
+
+/* Each span uses --start and --end as percentages along the track (0% = 2017, 100% = 2026) */
+.timeline-span {
+  position: absolute;
+  width: calc(var(--end) - var(--start));
+  left: var(--start);
+}
+
+/* Position group: above-years vs below-years */
+.span-above {
+  top: 0;
+}
+
+.span-below {
+  bottom: 0;
+}
+
+/* Extra lowering for certain spans (e.g. 1 and 5) */
+.span-low {
+  bottom: -12px;
+}
+
+/* Horizontal bar */
+.timeline-span .span-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transform: translateY(-50%);
+  border-radius: 999px;
+}
+
+/* Hide the bar entirely for point-only spans (Invesco) */
+.span-point-only .span-line {
+  display: none;
+}
+
+/* Central dot */
+.timeline-span .span-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Number near the dot */
+.timeline-span .span-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Label positions */
+.span-below .span-label {
+  top: calc(50% + 16px);  /* number under dot */
+}
+
+.span-above .span-label {
+  top: calc(50% - 22px);  /* number above dot */
+}
+
+/* ============================
+   TIMELINE ITEMS (EXPLANATIONS)
+   ============================ */
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline-number {
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.timeline-content p {
+  margin: 0.15rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .timeline-bar {
+    padding: 1.4rem 1rem 3rem;
+  }
+
+  .timeline-years {
+    font-size: 0.7rem;
+  }
+
+  .timeline-bar::before {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .timeline-track {
+    left: 1rem;
+    right: 1rem;
+    height: 80px;
+  }
+
+  .timeline-items {
+    gap: 1.2rem;
+  }
+
+  .timeline-item {
+    padding-left: 2.5rem;
+  }
+
+  .timeline-number {
+    width: 22px;
+    height: 22px;
+    font-size: 0.8rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* === Adjust 4 (span-above) downward slightly === */
+.span-above {
+  top: 16px !important;   /* Was 0px — lowers the whole bar & dot */
+}
+
+/* === Raise the bottom labels slightly === */
+.span-below .span-label,
+.span-low .span-label {
+  top: calc(50% + 2px) !important;   /* Was +16px — raises numbers closer to dot */
+}
+
+/* Optional: raise the dot + bar together slightly for below spans */
+.span-below {
+  bottom: 8px !important;   /* Was 0 — brings whole bottom group upward */
+}
+/* Fine-tune bottom label positions */
+
+/* Normal bottom spans: 2, 3, 6 */
+.timeline-track .span-below:not(.span-low) .span-label {
+  top: calc(50% + 6px) !important;  /* slightly above the "low" ones */
+}
+
+/* Lower bottom spans: 1 and 5 (span-low) */
+.timeline-track .span-low .span-label {
+  top: calc(50% + 6px) !important;  /* a bit further down */
+}
+
+/* Also separate their vertical positions slightly (contole vert 6,3,2) */
+.timeline-track .span-below:not(.span-low) {
+  bottom: 30px !important;   /* normal bottom spans (2, 3, 6) */
+}
+/* contolre vert 1,5*/
+.timeline-track .span-low {
+  bottom: 20px !important;  /* keep 1 and 5 a touch lower */
+}
+
+
+/* Make Invesco (1) and Research Assistant (3) headings red */
+.timeline-item:nth-of-type(1) h3,
+.timeline-item:nth-of-type(3) h3 {
+  color: #e60000;   /* deep professional red */
+  font-weight: 700;
+}
+
+/* Make dots for 1 and 3 red */
+.timeline-track .timeline-span:nth-of-type(6) .span-dot,   /* 1st experience */
+.timeline-track .timeline-span:nth-of-type(4) .span-dot {  /* 3rd experience */
+  background: #e60000 !important;
+}
+
+/* Make bar for 3rd experience red */
+.timeline-track .timeline-span:nth-of-type(4) .span-line {
+  background: #e60000 !important;
+}
+
+
+/* PROJECTS TAB */
+
+#projects h2 {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.projects-intro {
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+.projects-card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Project selector boxes – sharp edges */
+.project-card {
+  border: 1px solid #d1d5db;
+  border-radius: 0;              /* sharp corners */
+  background: #f9fafb;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+.project-card:hover {
+  background: #e5e7eb;
+}
+
+.project-card.active {
+  background: #ffffff;
+  border-color: #e60000;
+  color: #e60000;
+}
+
+/* White detail panel just below the boxes */
+.project-detail-shell {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;            /* can set to 0 if you want this sharp too */
+  padding: 1.2rem 1.3rem;
+  margin-top: 0.4rem;            /* small gap from the boxes */
+}
+
+/* Only one project panel visible at a time */
+.project-panel {
+  display: none;
+}
+
+.project-panel.active {
+  display: block;
+}
+
+.project-panel h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: #e60000;
+  font-weight: 700;
+}
+
+.project-panel p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Mobile tweak */
+@media (max-width: 640px) {
+  .projects-card-row {
+    flex-direction: column;
+  }
+
+  .project-card {
+    flex: 1 1 auto;
+  }
+}
+
+/* PROJECT TIMELINE (This Website project only) */
+
+.project-subheading {
+  margin-top: 1.5rem;
+  color: #e60000;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.project-timeline {
+  margin-top: 1rem;
+  border-left: 3px solid #e60000;
+  padding-left: 1.2rem;
+}
+
+.project-timeline-item {
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+
+.project-timeline-dot {
+  width: 12px;
+  height: 12px;
+  background: #e60000;
+  border-radius: 50%;
+  position: absolute;
+  left: -26.45px;      /* tweak to taste: -5px or -7px if needed */
+  top: 5px;
+}
+
+.project-timeline-content h5 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.project-timeline-content p {
+  margin: 0.3rem 0 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* Masters Project – Link Grid */
+.mp-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  max-width: 450px;
+  margin: 0 auto 1.2rem auto;
+  text-align: center;
+}
+.mp-links-grid a {
+  font-weight: 600;
+  color: #e60000;
+  text-decoration: none;
+}
+.mp-links-grid a:hover {
+  text-decoration: underline;
+}
+
+/* Subheadings */
+.mp-subheading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e60000;
+}
+
+/* Model Variant Table */
+
+.model-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+.model-table th {
+  background: #f5f5f5;
+  padding: 8px;
+  border-bottom: 2px solid #ccc;
+  font-weight: 700;
+  text-align: center;
+}
+.model-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.model-variant-title,
+.example-title {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #e60000;
+  text-align: center;
+}
+
+/* Masters Project – Link Grid (Improved Version) */
+.mp-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* Two wide columns */
+  column-gap: 40px;                 /* More space between columns */
+  row-gap: 12px;                    /* More vertical spacing */
+  max-width: 700px;                 /* Wider container */
+  margin: 0 auto 1.4rem auto;       /* Centre it */
+  text-align: left;                 /* Cleaner than centred */
+}
+
+.mp-links-grid a {
+  display: block;                   /* Forces each link onto its own line */
+  white-space: nowrap;              /* Prevents awkward wrapping */
+  font-weight: 600;
+  color: #e60000;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.mp-links-grid a:hover {
+  text-decoration: underline;
+}
+/* Masters Project – skills list */
+.mp-skills-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.mp-skills-list li {
+  margin-bottom: 0.7rem;
+  line-height: 1.45;
+}
+
+/* Masters Project – terminology list */
+.mp-terminology {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.mp-terminology dt {
+  font-weight: 700;
+  margin-top: 0.6rem;
+}
+
+.mp-terminology dd {
+  margin: 0.1rem 0 0.3rem 0;
+  line-height: 1.4;
+}
+
+.software-video {
+  display: block;
+  margin: 1.2rem auto;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  max-height: 600px;  /* <<< limits the vertical stretch */
+  border-radius: 6px;
+  object-fit: contain; /* ensures correct proportions */
+}
+
+/* SKILLS TAB */
+
+.skills-section {
+  margin-top: 1.8rem;
+}
+
+.skills-section h3 {
+  margin-bottom: 0.6rem;
+}
+
+.skill-block {
+  margin-bottom: 1.1rem;
+}
+
+.skill-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.skill-details {
+  margin: 0.2rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.key-skills-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  column-count: 2;         /* makes two columns */
+  column-gap: 2rem;        /* spacing between columns */
+}
+
+.key-skills-list li {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+#skills h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+
+#skills h2 {
+  color: #e60000;
+  font-weight: 700;
+}
+
+
+
+/* SOFTWARE TAB */
+
+.software-block {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+.software-text {
+  flex: 1.4;
+}
+
+.software-text p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.software-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.software-images img {
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+/* Ensures layout stacks cleanly on mobile */
+@media (max-width: 800px) {
+  .software-block {
+    flex-direction: column;
+  }
+}
+
+
+/* SOFTWARE — vertical layout */
+
+.software-block-vertical {
+  margin-top: 1.5rem;
+}
+
+.software-text p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Large image group */
+.software-images-large {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem; /* spacing between images */
+}
+
+.software-images-large img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  transform: scale(1.3);         /* makes images ~3× original area */
+  transform-origin: top left;     /* enlarges downward */
+}
+
+/* Linux image only */
+.linux-image {
+  width: 75%;          /* narrower than the others */
+  max-width: 650px;    /* hard cap so it never gets too wide */
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 6rem;
+}
+
+.linux-terminal {
+  margin-left: 1.5rem;
+  background: #e5e7eb;        /* lighter grey background */
+  color: #1e293b;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+.latex-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;      /* ensures it looks good on mobile */
+}
+
+/* SOFTWARE intro + index */
+
+.software-intro {
+  margin-bottom: 1rem;
+}
+
+.software-intro p {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.software-index {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0;
+  column-count: 2;        /* two columns */
+  column-gap: 1.8rem;
+  max-width: 420px;       /* keeps it from stretching too wide */
+}
+
+.software-index li {
+  margin-bottom: 0.3rem;
+}
+
+.software-index a {
+  color: #e60000;         /* red names */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.software-index a:hover {
+  text-decoration: underline;
+}
+
+/* Make Software section headings red too */
+
+#software h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+.home-body h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+.home-highlights h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+.home-interests h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+.home-overview h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+.education-section h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+
+.software-index {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1.2rem auto;  /* centers the whole block */
+  column-count: 2;
+  column-gap: 1.8rem;
+  max-width: 420px;            /* keeps the width tight so it looks neat */
+  text-align: center;          /* centers the link text */
+}
+
+#software h2 {
+  text-decoration: underline;
+  text-underline-offset: 4px;   /* optional: moves underline slightly lower = cleaner look */
+}
+
+#skills h2 {
+  text-decoration: underline;
+  text-underline-offset: 6px;   /* optional: moves underline slightly lower = cleaner look */
+}
+
+#highlighted-experiences h2 {
+  text-decoration: underline;
+  text-underline-offset: 6px;   /* optional: moves underline slightly lower = cleaner look */
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .home-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+    .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-details {
+    text-align: left;
+    margin-top: 0.2rem;
+  }
+
+  .header-right {
+    align-self: stretch;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
