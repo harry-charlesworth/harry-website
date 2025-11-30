@@ -16,6 +16,15 @@ img {
   max-width: 100%;        /* ensures images never overflow the container */
   height: auto;
 }
+.tabs .tab {
+  color: #000 !important;      /* force black text */
+  -webkit-text-fill-color: #000 !important; /* iOS Safari fix */
+}
+.tabs .tab:hover,
+.tabs .tab:active,
+.tabs .tab.active {
+  color: #000 !important;
+}
 
 
 /* HEADER */
@@ -139,6 +148,11 @@ img {
   background: #e6e9ef;
 }
 
+.tab-finance {
+  background-color: #ffe4c4; /* pastel orange */
+}
+
+
 
 /* FOLDER BODY */
 
@@ -232,6 +246,21 @@ h2 {
   margin-bottom: 0.3rem;
   font-size: 0.95rem;
 }
+
+.home-interests ul {
+  padding-left: 1.2rem;
+  margin: 0.3rem 0 0;
+
+  column-count: 2;      /* ← splits into two columns */
+  column-gap: 2rem;     /* ← spacing between columns */
+}
+
+.home-interests li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  break-inside: avoid;   /* ← prevents awkward breaking */
+}
+
 
 .wavy-divider {
   width: 100%;

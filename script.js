@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     experience: "#dcfce7",  // light green
     projects: "#fae8ff",    // light purple
     skills: "#fee2e2",      // light red
-    software: "#e6e9ef"     // new colour trial
+    software: "#e6e9ef",     // new colour trial
+    finance: "#ffe4c4",   // pastel orange (bisque)
+
   };
 
   tabs.forEach(tab => {
