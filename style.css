@@ -1213,6 +1213,21 @@ h2 {
   text-underline-offset: 6px;   /* optional: moves underline slightly lower = cleaner look */
 }
 
+/* finance section
+
+/* Underline the main Finance section title */
+#finance > h2 {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+/* Make all subsection titles inside the Finance tab red */
+#finance h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+
 /* Responsive */
 
 @media (max-width: 640px) {
