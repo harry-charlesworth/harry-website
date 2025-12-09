@@ -754,6 +754,7 @@ h2 {
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-bottom: 0.9rem;
+  justify-content: space-between;
 }
 
 /* Project selector boxes – sharp edges */
@@ -766,7 +767,7 @@ h2 {
   font-weight: 600;
   color: #0f172a;
   cursor: pointer;
-  flex: 1 1 150px;
+  flex: 0 0 calc(33.333% - 0.6rem);
   text-align: center;
 }
 
@@ -820,6 +821,88 @@ h2 {
     flex: 1 1 auto;
   }
 }
+
+.Section-title-2,
+.Section-subtitle-2 {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateX(-12.5%); /* moves heading slightly left */
+}
+
+
+
+.Section-title-2 {
+  font-size: 1.4rem;      /* h4 size */
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  color: #0f172a;
+}
+
+.Section-subtitle-2 {
+  font-size: 1rem;        /* normal text size */
+  margin-bottom: 1.2rem;
+  color: #475569;         /* subtle slate tone */
+  font-style: italic;     /* ensures the italics you want */
+}
+
+/* Finance Project – Link Grid (Improved Version) */
+.fp-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* Two wide columns */
+  column-gap: 40px;                 /* More space between columns */
+  row-gap: 12px;                    /* More vertical spacing */
+  max-width: 700px;                 /* Wider container */
+  margin: 0 auto 1.4rem auto;       /* Centre it */
+  text-align: left;                 /* Cleaner than centred */
+}
+
+.fp-links-grid a {
+  display: block;                   /* Forces each link onto its own line */
+  white-space: nowrap;              /* Prevents awkward wrapping */
+  font-weight: 600;
+  color: #e60000;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.fp-links-grid a:hover {
+  text-decoration: underline;
+}
+
+.phase-title {
+  text-align: left;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.video-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paper-item {
+  display: grid;
+  grid-template-columns: 80px 1fr; /* left column fixed, right flexible */
+  column-gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.paper-label {
+  font-weight: bold;
+  white-space: nowrap; /* "Paper 1", "Paper 5" won't wrap */
+}
+
+.paper-title {
+  text-indent: 0;        /* ensures clean alignment */
+  word-wrap: break-word; /* wraps long titles cleanly */
+}
+
+
+
 
 /* PROJECT TIMELINE (This Website project only) */
 
